@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define NBCREA 5
+#ifndef         NBCREA
+#define		NBCREA 5
 
 typedef struct  s_creature
 {
@@ -13,6 +14,7 @@ typedef struct  s_creature
   int		pmmax;
 }		t_creature;
 
+#endif		/* !NBCREA */
 
 static t_creature g_creatures[] =
   {

@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 17:21:45 2015 KAYONGA Earvin
-** Last update Mon Dec 14 18:08:51 2015 KAYONGA Earvin
+** Last update Mon Dec 14 19:25:30 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -13,7 +13,7 @@
 
 char		*getArgs()
 {
-  char *a;
+  char		*a;
 
   my_putstr("Votre Tour (Quit pour quitter) > ");
   if ((a = readLine()) != NULL &&
@@ -21,18 +21,22 @@ char		*getArgs()
        || !my_strcmp(a, "magic catch")))
     return a;
   else if (!my_strcmp(a, "Quit"))
-    return a;
+    return (a);
   else{
     my_putstrN("Pas compris: help me !!! ou magic catch");
-    return getArgs();
+    return (getArgs());
   }
 }
 
 void		setPlayer(char *name)
 {
-  char *arg;
+  char		*arg;
+  t_player	*current;
 
   my_putstr("Bienvenue ");
+  if ((current = malloc(sizeof(t_player))) == NULL)
+    return;
+  current->name = name;
   my_putstrN(name);
   arg = getArgs();
   while (my_strcmp(arg, "Quit"))

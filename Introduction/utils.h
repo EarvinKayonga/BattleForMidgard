@@ -5,21 +5,26 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Mon Dec 14 18:26:02 2015 KAYONGA Earvin
+** Last update Mon Dec 14 19:24:46 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
 
-typedef struct	s_container
+typedef struct  s_creature
+{
+  char          *name;
+  int           lvl;
+  int           pv;
+  int           pvmax;
+  int           pm;
+  int           pmmax;
+}		t_creature;    
+
+typedef struct	s_player
 {
   char		*name;
-}		t_container;
-  
-typedef struct	s_maillon
-{
-  char		*name;
-  t_container	*animals;
-}		t_maillon;
+  t_creature	*team;
+}		t_player;
 
 char		*readLine();
 int		my_strlen(char *str);
