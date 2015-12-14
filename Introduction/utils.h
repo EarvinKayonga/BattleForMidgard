@@ -5,10 +5,15 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Mon Dec 14 19:24:46 2015 KAYONGA Earvin
+** Last update Mon Dec 14 19:47:35 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
+
+typedef struct	s_hist
+{
+  int		count;
+}		t_hist;
 
 typedef struct  s_creature
 {

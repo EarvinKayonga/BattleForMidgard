@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 17:21:45 2015 KAYONGA Earvin
-** Last update Mon Dec 14 19:29:09 2015 KAYONGA Earvin
+** Last update Mon Dec 14 19:53:51 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -32,14 +32,17 @@ void		setPlayer(char *name)
 {
   char		*arg;
   t_player	*current;
+  t_hist	*hist;
 
   my_putstr("Bienvenue ");
-  if ((current = malloc(sizeof(t_player))) == NULL)
+  if ((current = malloc(sizeof(t_player))) == NULL ||
+      (hist = malloc(sizeof(t_hist))) == NULL)
     return;
   current->name = name;
-  my_putstrN(name);
+  my_putstrN(current->name);
   arg = getArgs();
   while (my_strcmp(arg, "Quit"))
     arg = getArgs();
   free(current);
+  free(hist);
 }
