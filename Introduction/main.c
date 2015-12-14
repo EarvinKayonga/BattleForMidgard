@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 15:56:08 2015 KAYONGA Earvin
-** Last update Mon Dec 14 16:31:07 2015 KAYONGA Earvin
+** Last update Mon Dec 14 16:33:43 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -17,7 +17,7 @@ int		main(int argc, char **argv)
   i = 0;
   while (i < argc)
     {
-      my_putstr(argv[i])
+      my_putstr(argv[i]);
     }
   return (0);
 }
