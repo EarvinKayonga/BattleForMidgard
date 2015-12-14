@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 17:21:45 2015 KAYONGA Earvin
-** Last update Mon Dec 14 19:25:30 2015 KAYONGA Earvin
+** Last update Mon Dec 14 19:29:09 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -41,4 +41,5 @@ void		setPlayer(char *name)
   arg = getArgs();
   while (my_strcmp(arg, "Quit"))
     arg = getArgs();
+  free(current);
 }
