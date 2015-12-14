@@ -5,7 +5,7 @@
 ## Login   <kayong_e@etna-alternance.net>
 ## 
 ## Started on  Mon Dec 14 15:52:54 2015 KAYONGA Earvin
-## Last update Mon Dec 14 17:01:51 2015 KAYONGA Earvin
+## Last update Mon Dec 14 17:23:02 2015 KAYONGA Earvin
 ##
 CC 	=	gcc
 CFLAGS 	= 	-W -Wall -Werror
@@ -32,6 +32,7 @@ SRC 	=	../utils/getCreature.c		\
 		../utils/my_strndup.c		\
 		../utils/readline.c		\
 		my_putstrN.c			\
+		setting.c			\
 		main.c
 
 OBJ	=	$(SRC:%.c=%.o)
