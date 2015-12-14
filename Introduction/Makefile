@@ -5,10 +5,10 @@
 ## Login   <kayong_e@etna-alternance.net>
 ## 
 ## Started on  Mon Dec 14 15:52:54 2015 KAYONGA Earvin
-## Last update Mon Dec 14 17:23:02 2015 KAYONGA Earvin
+## Last update Mon Dec 14 17:31:11 2015 KAYONGA Earvin
 ##
 CC 	=	gcc
-CFLAGS 	= 	-W -Wall -Werror
+CFLAGS 	= 	-W -Wall -Werror -Wextra
 NAME 	=	sta
 RM 	=	rm -f
 SRC 	=	../utils/getCreature.c		\
