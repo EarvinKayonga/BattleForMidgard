@@ -2,7 +2,7 @@
 
 ## Description
 
-   School project
+   School project in C
 
 
 
@@ -13,5 +13,6 @@
 ```
  git clone [this repo]
  cd BattleForMidgard
+ cd Introduction or cd Battle ou cd Final
  make
 ```
