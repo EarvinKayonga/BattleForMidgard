@@ -13,6 +13,6 @@
 ```
  git clone [this repo]
  cd BattleForMidgard
- cd Introduction or cd Battle ou cd Final
+ cd Introduction or cd Battle or cd Final
  make
 ```
