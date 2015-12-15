@@ -14,3 +14,7 @@
  cd Introduction or cd Battle or cd Final
  make
 ```
+## Collaborators
+
+* [EarvinKayonga](https://github.com/EarvinKayonga/)
+* [StevyDubo](https://github.com/stevy97)
