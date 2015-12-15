@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:55:01 2015 KAYONGA Earvin
-** Last update Tue Dec 15 15:51:31 2015 KAYONGA Earvin
+** Last update Tue Dec 15 22:31:47 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -22,15 +22,24 @@ void		debut(t_player *current, t_creature *monster)
   my_putstrN(" débute ");
 }
 
-int		magic()
+int		magic(t_player *current, t_hist **hist,
+		      t_creature *monster)
 {
-  my_putstrN(" Magic ");
-  return (1);
+  if (current  != NULL && hist != NULL && monster != NULL)
+    {
+      //capture(current->name, monster->name);
+      return (1);
+    }
+  return (0);
 }
 
-int		help()
+int		help(t_player *current, t_hist **hist,
+		      t_creature *monster)
 {
-  my_putstrN("\nVous tentez de prendre la suite ... \n");
+  my_putstrN("\nVous tentez de prendre la fuite ... \n");
+  my_putstrN("\n ... fuite réussie ... \n");
+  if (current && hist && monster)
+    return (0);
   return (0);
 }
 
@@ -44,5 +53,7 @@ int		battle(t_player *current, t_hist *hist,
   debut(current, monster);
   if (arg == NULL || hist == NULL)
     return (1);
-  return tab[my_strcmp(arg, "magic catch") + 1]();
+  return tab[my_strcmp(arg, "magic catch") + 1](current,
+						&hist,
+						monster);
 }
