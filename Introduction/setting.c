@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 17:21:45 2015 KAYONGA Earvin
-** Last update Tue Dec 15 11:54:50 2015 KAYONGA Earvin
+** Last update Tue Dec 15 14:11:00 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -32,9 +32,9 @@ void		annonce(t_creature *monster, t_player *player)
 {
   if (monster == NULL || player == NULL)
     return;
-  my_putstr("Un ");
+  my_putstr("\nUn ");
   my_putstr(monster->name);
-  my_putstrN(" vient d'apparaitre, \n...\nQue faire ?");
+  my_putstrN(" vient d'apparaitre, \n...\nQue faire ?\n...\n");
 }
 
 void		setPlayer(char *name)
@@ -50,7 +50,7 @@ void		setPlayer(char *name)
   else if ((monster = getCreature()) == NULL)
     return;
   current->name = name;
-  my_putstrN(current->name); 
+  my_putstrN(current->name);
   annonce(monster, current);
   arg = getArgs();
   while (arg == NULL || my_strcmp(arg, "Quit"))
