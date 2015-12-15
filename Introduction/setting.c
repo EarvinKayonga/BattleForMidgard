@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 17:21:45 2015 KAYONGA Earvin
-** Last update Tue Dec 15 11:36:12 2015 KAYONGA Earvin
+** Last update Tue Dec 15 11:54:50 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -44,7 +44,6 @@ void		setPlayer(char *name)
   t_hist	*hist;
   t_creature	*monster;
 
-  my_putstr("Bienvenue ");
   if ((current = malloc(sizeof(t_player))) == NULL ||
       (hist = malloc(sizeof(t_hist))) == NULL)
     return;
@@ -54,7 +53,12 @@ void		setPlayer(char *name)
   my_putstrN(current->name); 
   annonce(monster, current);
   arg = getArgs();
-  while (my_strcmp(arg, "Quit"))
-    arg = getArgs();
+  while (arg == NULL || my_strcmp(arg, "Quit"))
+    {
+      if (monster == NULL || battle(current, hist, monster, arg) == 1)
+	return;
+      monster = getCreature();
+      arg = getArgs();
+    }
   release(current, hist, monster, arg);
 }

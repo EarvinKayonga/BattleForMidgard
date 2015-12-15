@@ -5,7 +5,7 @@
 ## Login   <kayong_e@etna-alternance.net>
 ## 
 ## Started on  Mon Dec 14 15:52:54 2015 KAYONGA Earvin
-## Last update Tue Dec 15 11:41:21 2015 KAYONGA Earvin
+## Last update Tue Dec 15 12:12:07 2015 KAYONGA Earvin
 ##
 CC 	=	gcc
 CFLAGS 	= 	-W -Wall -Werror -Wextra
@@ -32,6 +32,7 @@ SRC 	=	../utils/getCreature.c		\
 		../utils/my_strndup.c		\
 		../utils/readline.c		\
 		my_putstrN.c			\
+		battle.c			\
 		mem.c				\
 		setting.c			\
 		main.c
