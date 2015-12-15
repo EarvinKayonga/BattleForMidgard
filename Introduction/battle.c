@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:55:01 2015 KAYONGA Earvin
-** Last update Tue Dec 15 22:31:47 2015 KAYONGA Earvin
+** Last update Tue Dec 15 23:02:15 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -15,11 +15,11 @@ void		debut(t_player *current, t_creature *monster)
 {
   if (current == NULL || monster == NULL)
     return;
-  my_putstr("\n Le combat entre ");
+  my_putstr("\nLe combat entre ");
   my_putstr(current->name);
   my_putstr(" et ");
   my_putstr(monster->name);
-  my_putstrN(" débute ");
+  my_putstrN(" débute \n");
 }
 
 int		magic(t_player *current, t_hist **hist,
@@ -27,8 +27,14 @@ int		magic(t_player *current, t_hist **hist,
 {
   if (current  != NULL && hist != NULL && monster != NULL)
     {
-      //capture(current->name, monster->name);
-      return (1);
+      my_putstr(current->name);
+      my_putstrN(" tente de capturer la créature \n");
+      if (results() > 2)
+	{
+	  capture(current->name, monster->name);
+	  return (1);
+	}
+      my_putstrN("\n Ca n'a pas marché pas");
     }
   return (0);
 }

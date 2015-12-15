@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Tue Dec 15 22:23:06 2015 KAYONGA Earvin
+** Last update Tue Dec 15 22:46:53 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
@@ -45,10 +45,12 @@ void		my_put_nbr(int num);
 void		my_putchar(char chr);
 void		my_putstrN(char *str);
 void		setPlayer(char *str);
+int		results();
 t_creature	*getCreature();
 void		release(t_player * current, t_hist *hist,
 			t_creature *monster, char *arg);
 int             battle(t_player *current, t_hist *hist,
 		       t_creature *monster, char *arg);
+void		capture(char *player, char *monster);
 
 #endif  /* !UTILS_H */
