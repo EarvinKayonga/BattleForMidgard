@@ -1,3 +1,4 @@
+#include<time.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -32,6 +33,7 @@ t_creature	*getCreature()
   int		rnd;
   t_creature	*crea;
 
+  srand (time (NULL));
   rnd = rand() % NBCREA;
   if ((crea = malloc(sizeof(t_creature))) == NULL)
     return (NULL);

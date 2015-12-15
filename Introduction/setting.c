@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 17:21:45 2015 KAYONGA Earvin
-** Last update Mon Dec 14 19:53:51 2015 KAYONGA Earvin
+** Last update Tue Dec 15 11:27:41 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -28,18 +28,31 @@ char		*getArgs()
   }
 }
 
+void		annonce(t_creature *monster, t_player *player)
+{
+  if (monster == NULL || player == NULL)
+    return;
+  my_putstr("Un ");
+  my_putstr(monster->name);
+  my_putstrN(" vient d'apparaitre, \n...\nQue faire ?");
+}
+
 void		setPlayer(char *name)
 {
   char		*arg;
   t_player	*current;
   t_hist	*hist;
+  t_creature	*monster;
 
   my_putstr("Bienvenue ");
   if ((current = malloc(sizeof(t_player))) == NULL ||
       (hist = malloc(sizeof(t_hist))) == NULL)
     return;
+  else if ((monster = getCreature()) == NULL)
+    return;
   current->name = name;
-  my_putstrN(current->name);
+  my_putstrN(current->name); 
+  annonce(monster, current);
   arg = getArgs();
   while (my_strcmp(arg, "Quit"))
     arg = getArgs();
