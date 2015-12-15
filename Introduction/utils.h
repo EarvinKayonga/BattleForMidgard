@@ -5,10 +5,12 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Tue Dec 15 12:12:46 2015 KAYONGA Earvin
+** Last update Tue Dec 15 15:45:08 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
+
+typedef int	(*t_func)();
 
 typedef struct	s_hist
 {
@@ -36,6 +38,7 @@ int		my_strlen(char *str);
 int		my_strcmp(char *s1, char *s2);
 char		*my_strcat(char *str1, char *str2);
 void		my_putstr(char *str);
+void		my_put_nbr(int num);
 void		my_putchar(char chr);
 void		my_putstrN(char *str);
 void		setPlayer(char *str);
