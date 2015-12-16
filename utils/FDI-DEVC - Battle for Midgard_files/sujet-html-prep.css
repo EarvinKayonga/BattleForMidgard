@@ -1,0 +1,324 @@
+body {
+    background: white;
+    font-family: 'Trebuchet MS', 'Verdana', 'Helvetica';
+    font-size: 0.9em;
+    padding: 5px;
+}
+
+h1 {
+    background: url('sujet-html/bannierePREPETNA.png') no-repeat top right;
+    background-size: 310px;
+    font-size: 30px;
+    color: #f47728;
+    border-bottom: 4px solid #f47728;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #0097a9;
+    border-bottom: 1px dotted #0097a9;
+    margin: 0 0 10px;
+}
+
+h3.webSeeAlso {
+    background-image: url('sujet-html/refs_web.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    color: #0097a9;
+    padding-top: 0.25em;
+    border-bottom: 1px dotted #0097a9;
+}
+
+h3.bookSeeAlso {
+    background-image: url('sujet-html/refs_books.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    color: #0097a9;
+    padding-top: 0.25em;
+    border-bottom: 1px dotted #0097a9;
+}
+
+
+ul.keyPoints {
+    list-style-image: url('sujet-html/point_clef.png');
+    list-style-type: square;
+}
+
+ul.prerequisites {
+    list-style-image: url('sujet-html/prerequis.png');
+    list-style-type: square;
+}
+
+ol.plan {
+    list-style-type: upper-roman;
+}
+
+ol.plan ol {
+    list-style-type: decimal;
+}
+
+ol.plan ol ol {
+    list-style-type: lower-alpha;
+}
+
+.good {
+    background-image: url('sujet-html/ok.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    min-height: 24px;
+}
+
+.bad {
+    background-image: url('sujet-html/ko.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    min-height: 24px;
+}
+
+kbd {
+    background-color: #FAF6F6;
+    color: black;
+    padding: 0 5px 0;
+    border-top: 1px solid #EEDDDD;
+    border-right: 2px solid #BBAAAA;
+    border-left: 1px solid #EEEEDD;
+    border-bottom: 2px solid #BBAAAA;
+}
+
+div.notice {
+    background-color: #B2DFE5;
+    margin: 1em;
+    padding: 16px 5px 10px 40px;
+    min-height: 40px;
+    border: 1px solid #0097a9;
+    border-left: 5px solid #0097a9;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+
+div.notice h2, div.notice h3, div.notice h4, div.notice h5, div.notice h6 {
+    color: #0097a9;
+    border-bottom: 1px dotted #0097a9;
+    margin: 0 0 10px;
+}
+
+div.warning {
+    margin: 1em;
+    min-height: 40px;
+    border: 1px solid #f7a32b;
+    border-left: 5px solid #f7a32b;
+    font-size: 0.9em;
+    background: #fcde9d url('sujet-html/attention.png') no-repeat 8px 12px;
+    padding: 16px 5px 10px 40px;
+    border-radius: 4px;
+}
+
+div.warning h2, div.warning h3, div.warning h4, div.warning h5, div.warning h6 {
+    color: #993333;
+    border-bottom: 1px dotted #993333;
+    margin: 0 0 10px;
+}
+
+div.forbidden {
+    margin: 1em;
+    min-height: 40px;
+    border: 1px solid #993333;
+    border-left: 5px solid #993333;
+    font-size: 0.9em;
+    background: #EE8888 url('sujet-html/erreur.png') no-repeat 5px 5px;
+    padding: 16px 5px 10px 40px;
+    border-radius: 4px;
+}
+
+div.forbidden h2, div.forbidden h3, div.forbidden h4, div.forbidden h5, div.forbidden h6 {
+    color: #aa0000;
+    border-bottom: 1px dotted #aa0000;
+    margin: 0 0 10px;
+}
+
+p.abstract {
+    margin: 1em;
+    min-height: 40px;
+    border: 1px solid #999999;
+    border-left: 5px solid #999999;
+    font-size: 0.9em;
+    background: #CCCCCC url('sujet-html/tableau.png') no-repeat 5px 5px;
+    padding: 16px 5px 10px 40px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+div.loveIt {
+    margin: 1em;
+    min-height: 40px;
+    border: 1px solid #EF3C63;
+    border-left: 5px solid #EF3C63;
+    font-size: 0.9em;
+    background: #FFCBCB url('sujet-html/coeur.png') no-repeat 5px 5px;
+    padding: 16px 5px 10px 40px;
+    border-radius: 4px;
+}
+
+div.loveIt h2, div.loveIt h3, div.loveIt h4, div.loveIt h5, div.loveIt h6 {
+    color: #ef3d42;
+    border-bottom: 1px dotted #ef3d42;
+    margin: 0 0 10px;
+}
+
+pre.terminal {
+    margin: 1em;
+    min-height: 40px;
+    font-size: 0.9em;
+    background: #000000 url('sujet-html/terminal.png') no-repeat 5px 5px;
+    padding: 16px 5px 10px 40px;
+    font-family: fixed, monospace;
+    color: white;
+    border-radius: 4px;
+}
+
+code.multiline {
+    margin: 1em;
+    color: #0000BB;
+    background: url('sujet-html/code.png') no-repeat 5px 5px;
+    padding: 16px 5px 10px 40px;
+    border-top: 1px dashed #999999;
+    border-bottom: 1px dashed #999999;
+    border-left: 3px solid #999999;
+    white-space: pre;
+    display: block;
+    border-radius: 4px;
+}
+
+code>span.string {
+    color: #DD0000;
+}
+
+code>span.comment {
+    color: #FF8000;
+    font-style: italic;
+}
+
+code>span.punctuation {
+    color: #007700;
+    font-weight: bold;
+}
+
+code>span.other {
+    color: #000000;
+}
+
+code>span.tags {
+    color: #000000;
+    font-weight: bold;
+}
+
+table {
+    border-collapse:collapse;
+    border-radius: 4px;
+    border-bottom: 2px solid #0097a9;
+}
+
+table caption {
+    font-size: 18px;
+    border: 2px solid #0097a9;
+    color: #f47728;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    text-align:center;
+}
+
+table th {
+    font-size: 16px;
+    padding-left:15px;
+    padding-right:15px;
+    background-color: #B2DFE5;
+    border-bottom: 2px;
+    text-align:center;
+    border-bottom: 2px solid #0097a9;
+}
+
+table td {
+    font-size: 14px;
+    padding-left:15px;
+    padding-right:15px;
+    border-bottom: 1px solid #0097a9;
+}
+
+dl {
+    padding: 16px 5px 10px 40px;
+}
+
+dl dt {
+    border-top: 1px dotted black;
+}
+
+dl dd {
+    padding: 10px 5px 10px 20px;
+}
+
+/* ----- General classes ----- */
+.clear {
+    clear: both;
+}
+.ul {
+    text-decoration: underline;
+}
+.pad20H {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+
+/* ----- Content classes ----- */
+div.left {
+    float: left;
+    width: 30%;
+    min-width: 30%;
+    max-width: 30%;
+}
+div.middle {
+    float: left;
+}
+div.right {
+    float: right;
+}
+div.mockup {
+    width: 65%;
+    max-width: 65%;
+}
+div.mockup img {
+    width: 100%;
+    max-height: 624px;
+    max-width: 781px;
+}
+
+div.contour {
+    border-radius: 4px;
+    border: 3px solid #0097a9;
+    padding: 10px;
+}
+
+footer {
+    height: 57px;
+    width: 173px;
+    margin-top: 10px;
+    background-image: url('sujet-html/LogoPrepETNA.jpg');
+    background-size: 94px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media all and (max-width:800px){
+    h1 {
+        background: url();
+    }
+}

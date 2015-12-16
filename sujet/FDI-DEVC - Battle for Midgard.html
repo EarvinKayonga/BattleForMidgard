@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- saved from url=(0100)https://prepintra-api.etna-alternance.net/sessions/1488/activities/4930/download/sujet_-_battle.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <link href="./FDI-DEVC - Battle for Midgard_files/sujet-html-prep.css" type="text/css" rel="stylesheet">
+        <title>FDI-DEVC - Battle for Midgard</title>
+    <style type="text/css"></style></head>
+    <body>
+        <h1>FDI-DEVC - Battle for Midgard</h1>
+
+        <div class="notice">
+            Rendu SVN :<br>
+            <blockquote>https://rendu-svn.etna-alternance.net/v2/2018_ETNA Basics - Octobre_FDI-DEVC_8_0-1488/Battle For Midgard/kayong_e
+        </blockquote></div>
+
+        <div class="forbidden">
+            Attention :<br>
+            <blockquote>L’utilisation de la libc est strictement interdite excepté pour les appels système <b>read()</b>, <b>write()</b>, <b>malloc()</b>, <b>free()</b>, <b>rand()</b>, <b>srand()</b> et <b>time()</b>.
+        </blockquote></div>
+
+        <p>Maintenant que vous avez attrapé votre première créature, vous allez être en mesure d'arrêter de fuir tel un couard.</p>
+
+        <p>A l'aide de votre créature soumise par la Magic Box, combattez les hordes ennemies qui déferlent sur vous, ou forcez-les également à vous rejoindre.</p>
+
+        <div class="warning">
+            Compilation :<br>
+            <blockquote>ATTENTION ! Votre projet devra compiler avec un Makefile et avec les flags -W -Wall -Wextra et -Werror. Vos structures ainsi que les prototypes de vos fonctions devront se trouver dans un ou plusieurs fichier(s) header (.h). Chaque étape devra être rendue dans un dossier portant le nom de l’étape (Introduction, Battle et Final). Vous devrez donc avoir trois binaires différents.
+        </blockquote></div>
+
+        <h2>Battle :</h2>
+
+        <p>Votre binaire prendra en paramètre l’option “-n” permettant de spécifier votre nom.</p>
+
+        <pre class="terminal">Exemple :
+            ./sta -n Foula</pre>
+
+        <p>Votre programme devra lire sur l’entrée standard les différentes commandes permettant d’exécuter les actions réalisables par le héros lors de l’exécution du binaire.</p>
+
+        <p>Reprenez le contenu de votre étape précédente.</p>
+
+        <p>Cette fois-ci, votre programme s'effectuera en deux temps distincts :</p>
+
+        <ul>
+            <li>Un mode "Out of Battle" (OoB).</li>
+            <li>Un mode "In Battle" (IB).</li>
+        </ul>
+
+        <p>Votre programme commence en mode OoB, dans lequel vous pouvez effectuer les commandes suivantes :</p>
+
+        <ul>
+            <li>“team” =&gt; permet de lister le contenu de votre équipe de créatures et d'avoir toute sorte d'infos les concernant.</li>
+            <li>"you are the chosen one" =&gt; permet de définir laquelle de vos créatures se battra au combat.</li>
+            <li>“let's fight" =&gt; permet de démarrer un combat contre un monstre (aléatoire).</li>
+            <li>"quit" =&gt; permet de quitter <b>PROPREMENT</b> votre programme.</li>
+        </ul>
+
+        <pre class="terminal">Exemple :
+            &gt;./sta -n Prandra
+            Votre tour&gt; team
+            ....
+        </pre>
+
+        <p>Une fois un combat lancé, vous entrez en mode IB. A ce moment, les commandes que vous pourrez effectuer, ainsi que l'ennemi, seront (liste non-exhaustive):</p>
+        
+        <ul>
+            <li>"slash" =&gt; une attaque faisant perdre 15PV à la cible et retire 3PM au lanceur.</li>
+            <li>"fire" =&gt; un sort faisant perdre 30PV à la cible et retire 7PM au lanceur.</li>
+            <li>"gamble" =&gt; une attaque faisant perdre entre 0 et 20PV (de façon aléatoire) à la cible ou au lanceur (50% de chances).</li>
+            <li>"rest" =&gt; consomme un tour afin de regagner 10PM.</li>
+        </ul>
+        <p>Les commandes suivantes s'utilisent également en combat, mais uniquement par vos créatures :</p>
+        <ul>
+            <li>"magic catch" =&gt; utilise une magic box afin de tenter la capture de la créature (les chances sont proportionnelles à la vie perdue de la cible).</li>
+            <li>"quit" =&gt; permet de quitter le combat et de revenir en mode OoB.</li>
+        </ul>
+
+        <p>Une fois l'ennemi vaincu ou capturé, vous revenez en mode OoB et votre créature combattante est soignée de tous ses PV et PM (après s'être battue pour votre lâch...fierté, c'est la moindre des choses, non ?).</p>
+
+        <p>Si vous capturez la créature, elle rejoint votre équipe avec tous ses PV et PM.</p>
+
+        <p>Sachez qu'une créature capturée est deux fois plus puissante qu'une créature que vous affrontez (seulement au niveau des PV et PM).</p>
+
+    
+</body></html>
