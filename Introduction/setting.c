@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 17:21:45 2015 KAYONGA Earvin
-** Last update Wed Dec 16 17:12:24 2015 KAYONGA Earvin
+** Last update Wed Dec 16 18:12:51 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -22,7 +22,7 @@ char		*getArgs()
     return a;
   else if (!my_strcmp(a, "Quit"))
     return (a);
-  else{
+  else {
     my_putstrN("Pas compris: help me !!! ou magic catch");
     return (getArgs());
   }
