@@ -34,22 +34,21 @@ void		aff_list(t_list* p)
 
 void		Outofbattle(t_list *list)
 {
-  char		**argv;
+  char		*str;
   t_creature	*monster;
   t_player	*player;
 
-  argv[1] = "Votre tour> ";
-  my_putstr(argv[1]);    
-  argv[2] = readline();
-  if (argv[2] == "team")
+  my_putstr("Votre tour> ");    
+  str = readline();
+  if (str == "team")
     {
-    my_putstr(argv[2]);
+    my_putstr(str);
     if (list->next != NULL)
 	aff_list(list);
     }
-  else if (argv[2] == "you are the chosen one" && list->next != NULL)
+  else if (str == "you are the chosen one" && list->next != NULL)
     {
-      my_putstr(argv[2]);
+      my_putstr(str);
       list->monster = getCreature();
     }
   else if (argv[2] == "let's fight")
