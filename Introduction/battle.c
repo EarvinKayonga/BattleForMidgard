@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:55:01 2015 KAYONGA Earvin
-** Last update Wed Dec 16 13:54:15 2015 KAYONGA Earvin
+** Last update Wed Dec 16 16:19:45 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -22,19 +22,20 @@ void		debut(t_player *current, t_creature *monster)
   my_putstrN(" débute \n");
 }
 
-int		magic(t_player *current, t_hist **hist,
+int		magic(t_player *current, t_hist *hist,
 		      t_creature *monster)
 {
   t_list *tmp;
+  t_hist *tmphist;
 
   if (current  != NULL && hist != NULL && monster != NULL)
     {
       my_putstr(current->name);
       my_putstrN(" tente de capturer la créature \n");
-      //add to hist #FIXME
+      if ((tmphist = add_hist(hist, current, monster, "magic catch")) != NULL)
+	hist = tmphist;
       if (results() > 2)
 	{
-	  //set last in hist to capturé #FIXME
 	  if((current->team = malloc(sizeof(t_list))) != NULL
 	     && (tmp = add_creature(current->team, monster)) != NULL)
 	      current-> team = tmp;
@@ -48,11 +49,15 @@ int		magic(t_player *current, t_hist **hist,
   return (0);
 }
 
-int		help(t_player *current, t_hist **hist,
+int		help(t_player *current, t_hist *hist,
 		      t_creature *monster)
 {
+  t_hist *tmphist;
+
   my_putstrN("\nVous tentez de prendre la fuite ... \n");
   my_putstrN("\n ... fuite réussie ... \n");
+  if ((tmphist = add_hist(hist, current, monster, "help me !!!")) != NULL)
+    hist = tmphist;
   if (current && hist && monster)
     return (0);
   return (0);
@@ -69,6 +74,6 @@ int		battle(t_player *current, t_hist *hist,
   if (arg == NULL || hist == NULL)
     return (1);
   return tab[my_strcmp(arg, "magic catch") + 1](current,
-						&hist,
+						hist,
 						monster);
 }

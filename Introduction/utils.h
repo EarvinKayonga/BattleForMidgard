@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Wed Dec 16 15:38:42 2015 KAYONGA Earvin
+** Last update Wed Dec 16 16:21:20 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
@@ -49,7 +49,6 @@ typedef struct		s_player
 
 typedef struct		s_hist
 {
-  int			index;
   t_player		*player;
   t_creature		*opponent;
   t_attack		*attack;
@@ -58,7 +57,7 @@ typedef struct		s_hist
 }			t_hist;
 
 typedef int		(*t_func)(t_player *current,
-				  t_hist **hist,
+				  t_hist *hist,
 				  t_creature *monster);
 
 char			*readLine();
@@ -72,6 +71,8 @@ void			my_putstrN(char *str);
 void			setPlayer(char *str);
 int			results();
 t_creature		*getCreature();
+t_hist			*add_hist(t_hist *hist, t_player *current,
+				 t_creature *monster, char *arg);
 void			release(t_player * current, t_hist *hist,
 				t_creature *monster, char *arg);
 int			battle(t_player *current, t_hist *hist,
