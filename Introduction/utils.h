@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Wed Dec 16 11:41:56 2015 DUBO Stévy
+** Last update Wed Dec 16 11:49:14 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
@@ -33,7 +33,7 @@ typedef struct  s_creature
 typedef	struct	s_list
 {
   t_creature	*monster;
-  s_list	*next;
+  struct s_list	*next;
 }		t_list;
   
 typedef struct	s_player
