@@ -38,15 +38,15 @@ void		Outofbattle(t_list *list)
   if (str == "team")
     {
     my_putstr(str);
-    if (list->next != NULL)
+    if (list != NULL)
 	aff_list(list);
     }
-  else if (str == "you are the chosen one" && list->next != NULL)
+  else if (str == "you are the chosen one" && list != NULL)
     {
       my_putstr(str);
       list->monster = getCreature();
     }
-  else if (argv[2] == "let's fight")
+  else if (str == "let's fight")
     {
       debut(player, monster);
     }
@@ -56,13 +56,13 @@ void		Outofbattle(t_list *list)
 
 void		attack(t_attack *attack, t_creature *monster)
 {
-  char		**argv;
+  char		*s;
   t_creature	*crea;
 
-  argv[2] = readline();
-  if (argv[2] == "slash")
+  s = readline();
+  if (s == "slash")
     {
-      my_putstr(argv[2]);
+      my_putstr(s);
       crea->pv = crea->pv - 15;
       monster->pm = monster->pm - 3;
     }
@@ -71,7 +71,7 @@ void		attack(t_attack *attack, t_creature *monster)
       crea->pv = crea->pv - 30;
       monster->pm = monster->pm - 7;
     }
-  else if (argv[2] == "gamble" && (monster || crea))
+  else if (s == "gamble" && (monster || crea))
     {
       crea->pv = rand() % 21;
       monster->pv = rand() % 21;
