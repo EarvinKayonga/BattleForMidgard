@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Wed Dec 16 11:41:56 2015 DUBO Stévy
+** Last update Wed Dec 16 14:40:50 2015 DUBO Stévy
 */
 #ifndef		UTILS_H
 #define		UTILS_H
@@ -20,6 +20,13 @@ typedef struct	s_hist
   int		count;
 }		t_hist;
 
+typedef struct  s_attack
+{
+  struct s_attack	*next;
+  char			*name;
+  int			pm;
+}		t_attack;
+
 typedef struct  s_creature
 {
   char          *name;
@@ -28,12 +35,13 @@ typedef struct  s_creature
   int           pvmax;
   int           pm;
   int           pmmax;
+  t_attack	*attack;
 }		t_creature;
 
 typedef	struct	s_list
 {
-  t_creature	*monster;
-  s_list	*next;
+  struct	s_list	*next;
+  t_creature		*monster;
 }		t_list;
   
 typedef struct	s_player
@@ -41,13 +49,6 @@ typedef struct	s_player
   char		*name;
   t_list	*team;
 }		t_player;
-
-typedef struct  s_attack
-{
-  char		*name;
-  int		pm;
-}		t_attack;
-
 
 typedef int	(*t_func)(t_player *current,
 			  t_hist **hist,
