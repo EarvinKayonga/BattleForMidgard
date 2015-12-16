@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:36:19 2015 KAYONGA Earvin
-** Last update Wed Dec 16 13:11:44 2015 KAYONGA Earvin
+** Last update Wed Dec 16 15:29:32 2015 KAYONGA Earvin
 */
 
 #include<stdlib.h>	
@@ -27,8 +27,6 @@ void	release(t_player * current, t_hist *hist,
       arg != NULL)
     {
       recap(current, hist);
-      free(current);
-      free(hist);
       free(monster);
       free(arg);
     }
