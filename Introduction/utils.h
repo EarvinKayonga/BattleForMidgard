@@ -4,9 +4,10 @@
 ** Made by KAYONGA Earvin
 ** Login   <kayong_e@etna-alternance.net>
 ** 
-** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Wed Dec 16 17:17:52 2015 KAYONGA Earvin
+** Started on  Wed Dec 16 17:35:38 2015 KAYONGA Earvin
+** Last update Wed Dec 16 17:39:02 2015 KAYONGA Earvin
 */
+
 #ifndef		UTILS_H
 #define		UTILS_H
 
@@ -22,6 +23,7 @@ typedef struct		s_attack
   struct s_attack	*next;
   struct s_attack	*prev;
 }			t_attack;
+
 
 typedef struct		s_creature
 {

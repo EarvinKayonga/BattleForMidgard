@@ -5,7 +5,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 10:05:42 2015 DUBO Stévy
-** Last update Wed Dec 16 11:22:51 2015 KAYONGA Earvin
+** Last update Wed Dec 16 15:38:17 2015 DUBO Stévy
 */
 
 #include<unistd.h>
@@ -13,12 +13,9 @@
 #include<stdlib.h>
 #include"../Introduction/utils.h"
 
-void	Outofbattle(t_teambattle* p);
+void	Outofbattle(t_player* p, t_creature *monster);
 
-int	mainbattle(char** argv, int argc)
+int	mainbattle()
 {
-  int	game;
-
-  game = 1;
   return 0;
 }
