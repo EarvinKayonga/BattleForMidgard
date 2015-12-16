@@ -5,7 +5,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Wed Dec 16 21:04:08 2015 DUBO Stévy
+** Last update Wed Dec 16 22:56:03 2015 DUBO Stévy
 */
 
 #include<stdlib.h>
@@ -14,22 +14,26 @@
 #include"../Introduction/utils.h"
 
 void		my_putstr(char* str);
+void		my_put_nbr(int n);
+t_creature      *getCreature();
+char		*readline();
+void		debut(t_player *current, t_creature *monster);
 
 void		aff_list(t_creature *monster)
 {
   monster = getCreature();
   my_putstr(monster->name);
-  my_putnbr(monster->lvl);
-  my_putnbr(monster->pv);
-  my_putnbr(monster->pvmax);
-  my_putnbr(monster->pm);
-  my_putnbr(monster->pmmax);
+  my_put_nbr(monster->lvl);
+  my_put_nbr(monster->pv);
+  my_put_nbr(monster->pvmax);
+  my_put_nbr(monster->pm);
+  my_put_nbr(monster->pmmax);
 }
 
-void		Outofbattle(t_list *list)
+void		Outofbattle(t_creature *monster)
 {
   char		*str;
-  t_creature	*monster;
+  t_list	*list;
   t_player	*player;
   
   my_putstr("Votre tour> ");    
@@ -57,13 +61,13 @@ void		Outofbattle(t_list *list)
 void		attack(t_creature *monster)
 {
   char		*s;
-  t_creature	*crea;
+  t_creature	*opponent;
 
   s = readline();
   if (s == "slash")
     {
       my_putstr(s);
-      crea->pv = crea->pv - 15;
+      opponent->pv = opponent->pv - 15;
       monster->pm = monster->pm - 3;
     }
   else if (s == "fire")
@@ -72,17 +76,17 @@ void		attack(t_creature *monster)
       crea->pv = crea->pv - 30;
       monster->pm = monster->pm - 7;
     }
-  else if (s == "gamble" && (monster || crea))
+  else if (s == "gamble" && (monster || opponent))
     {
       my_putstr(s);
-      crea->pv = rand() % 21;
+      opponent->pv = rand() % 21;
       monster->pv = rand() % 21;
     }
 }
 void		Inbattle(t_creature *monster)
 {
-  t_creature	*crea;
+  t_creature	*opponent;
 
   monster = getCreature();
-  crea = getCreature();
+  opponent = getCreature();
 }
