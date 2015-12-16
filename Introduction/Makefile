@@ -5,7 +5,7 @@
 ## Login   <kayong_e@etna-alternance.net>
 ## 
 ## Started on  Mon Dec 14 15:52:54 2015 KAYONGA Earvin
-## Last update Tue Dec 15 22:48:29 2015 KAYONGA Earvin
+## Last update Wed Dec 16 13:39:59 2015 KAYONGA Earvin
 ##
 CC 	=	gcc
 CFLAGS 	= 	-W -Wall -Werror -Wextra
@@ -37,6 +37,8 @@ SRC 	=	../utils/getCreature.c		\
 		battle.c			\
 		mem.c				\
 		setting.c			\
+		element.c			\
+		list.c				\
 		main.c
 
 OBJ	=	$(SRC:%.c=%.o)

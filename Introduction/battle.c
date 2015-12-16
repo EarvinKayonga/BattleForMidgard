@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:55:01 2015 KAYONGA Earvin
-** Last update Tue Dec 15 23:21:08 2015 KAYONGA Earvin
+** Last update Wed Dec 16 13:54:15 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -25,16 +25,23 @@ void		debut(t_player *current, t_creature *monster)
 int		magic(t_player *current, t_hist **hist,
 		      t_creature *monster)
 {
+  t_list *tmp;
+
   if (current  != NULL && hist != NULL && monster != NULL)
     {
       my_putstr(current->name);
       my_putstrN(" tente de capturer la créature \n");
+      //add to hist #FIXME
       if (results() > 2)
 	{
+	  //set last in hist to capturé #FIXME
+	  if((current->team = malloc(sizeof(t_list))) != NULL
+	     && (tmp = add_creature(current->team, monster)) != NULL)
+	      current-> team = tmp;
 	  capture(current->name, monster->name);
 	  return (1);
 	}
-      my_putstrN("\n Ca n'a pas marché pas \n ");
+      my_putstrN("\n Ca n'a pas marché \n ");
       my_putstr(monster->name);
       my_putstrN(" s'énerve et vous charge violemment, vous poussant à fuir.");
     }

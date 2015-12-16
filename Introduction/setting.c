@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 17:21:45 2015 KAYONGA Earvin
-** Last update Tue Dec 15 15:15:38 2015 KAYONGA Earvin
+** Last update Wed Dec 16 13:09:38 2015 KAYONGA Earvin
 */
 
 #include	"utils.h"
@@ -56,7 +56,7 @@ void		setPlayer(char *name)
   while (arg == NULL || my_strcmp(arg, "Quit"))
     {
       if (monster == NULL || battle(current, hist, monster, arg) == 1)
-	return;
+	break;
       monster = getCreature();
       annonce(monster, current);
       arg = getArgs();
