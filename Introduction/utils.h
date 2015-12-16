@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Wed Dec 16 16:21:20 2015 KAYONGA Earvin
+** Last update Wed Dec 16 17:17:52 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
@@ -57,7 +57,7 @@ typedef struct		s_hist
 }			t_hist;
 
 typedef int		(*t_func)(t_player *current,
-				  t_hist *hist,
+				  t_hist **hist,
 				  t_creature *monster);
 
 char			*readLine();
@@ -82,5 +82,6 @@ t_list			*add_creature(t_list *list,
 				      t_creature *monster);
 void			aff_team(t_list *team);
 void			aff_creature(t_creature *monster);
+void			aff_hist(t_hist *hist);
 
 #endif  /* !UTILS_H	*/
