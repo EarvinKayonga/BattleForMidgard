@@ -5,7 +5,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Wed Dec 16 11:23:10 2015 KAYONGA Earvin
+** Last update Wed Dec 16 11:42:07 2015 DUBO Stévy
 */
 
 #include<stdlib.h>
@@ -17,24 +17,6 @@ void	my_putstr(char* str);
 
 void	aff_list(t_teambattle* p)
 {
-}
-
-int	long_list(t_teambattle* t)
-{
-  int	size;
-
-  size = 0;
-  if (t == NULL)
-      return 0;
-  else
-    {
-      while (t != NULL)
-	{
-	  t->next;
-	  size++;
-	}
-    }
-  return size;
 }
 
 void	Outofbattle()
