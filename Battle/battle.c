@@ -15,21 +15,16 @@
 
 void		my_putstr(char* str);
 
-void		aff_list(t_list* p)
+void		aff_list(t_creature *monster)
 {
-  t_creature	*monster;
-
   monster = getCreature();
-  while (p->next != NULL)
-    {
-      my_putstr(monster->name);
-      my_putnbr(monster->lvl);
-      my_putnbr(monster->pv);
-      my_putnbr(monster->pvmax);
-      my_putnbr(monster->pm);
-      my_putnbr(monster->pmmax);
-      p->next;
-    }
+  
+  my_putstr(monster->name);
+  my_putnbr(monster->lvl);
+  my_putnbr(monster->pv);
+  my_putnbr(monster->pvmax);
+  my_putnbr(monster->pm);
+  my_putnbr(monster->pmmax);
 }
 
 void		Outofbattle(t_list *list)
