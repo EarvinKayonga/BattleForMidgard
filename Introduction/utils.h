@@ -5,10 +5,15 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Tue Dec 15 22:46:53 2015 KAYONGA Earvin
+** Last update Wed Dec 16 11:21:18 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
+
+#define OoB 1
+#define IB 2
+#define ERROR -1
+
 
 typedef struct	s_hist
 {
@@ -30,6 +35,20 @@ typedef struct	s_player
   char		*name;
   t_creature	*team;
 }		t_player;
+
+typedef struct  s_teambattle
+{
+  static        t_creature g_creature[];
+  s_teambattle* next;
+}       t_teambattle;
+
+typedef struct  s_attack
+{
+  int   slash;
+  int   fire;
+  int   gamble;
+  int   rest;
+}       t_attack;
 
 
 typedef int	(*t_func)(t_player *current,

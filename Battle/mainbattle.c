@@ -5,11 +5,13 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 10:05:42 2015 DUBO Stévy
-** Last update Wed Dec 16 10:29:53 2015 DUBO Stévy
+** Last update Wed Dec 16 11:22:51 2015 KAYONGA Earvin
 */
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+
+#include<unistd.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include"../Introduction/utils.h"
 
 void	Outofbattle(t_teambattle* p);
 

@@ -5,13 +5,13 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Wed Dec 16 11:03:04 2015 DUBO Stévy
+** Last update Wed Dec 16 11:23:10 2015 KAYONGA Earvin
 */
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include "struct.h"
-#include "utils.h"
+
+#include<stdlib.h>
+#include<stdio.h>
+#include<unistd.h>
+#include"../Introduction/utils.h"
 
 void	my_putstr(char* str);
 
