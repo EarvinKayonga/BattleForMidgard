@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Mon Dec 14 16:10:43 2015 KAYONGA Earvin
-** Last update Wed Dec 16 13:00:06 2015 KAYONGA Earvin
+** Last update Wed Dec 16 13:41:08 2015 KAYONGA Earvin
 */
 #ifndef		UTILS_H
 #define		UTILS_H
@@ -73,5 +73,6 @@ void		capture(char *player, char *monster);
 t_list          *add_creature(t_list *list,
 			     t_creature *monster);
 void		aff_team(t_list *team);
+void		aff_creature(t_creature *monster);
 
 #endif  /* !UTILS_H */

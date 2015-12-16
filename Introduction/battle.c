@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:55:01 2015 KAYONGA Earvin
-** Last update Wed Dec 16 13:28:13 2015 KAYONGA Earvin
+** Last update Wed Dec 16 13:54:15 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -31,10 +31,10 @@ int		magic(t_player *current, t_hist **hist,
     {
       my_putstr(current->name);
       my_putstrN(" tente de capturer la créature \n");
-      //add to hist
+      //add to hist #FIXME
       if (results() > 2)
 	{
-	  //set last in hist to capturé
+	  //set last in hist to capturé #FIXME
 	  if((current->team = malloc(sizeof(t_list))) != NULL
 	     && (tmp = add_creature(current->team, monster)) != NULL)
 	      current-> team = tmp;
