@@ -5,7 +5,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Wed Dec 16 20:11:27 2015 DUBO Stévy
+** Last update Wed Dec 16 20:42:04 2015 DUBO Stévy
 */
 
 #include<stdlib.h>
@@ -30,19 +30,24 @@ void		aff_list(t_list* p)
 
 void		Outofbattle(t_list *list)
 {
+  char		*str;
   t_creature	*monster;
   t_player	*player;
-  char		*str;
-
+  
   my_putstr("Votre tour> ");    
   str = readline();
-  if (str == "team")
-    {
+  if (list != NULL)
+    if (str == "team")
+      {
+	my_putstr(str);
+	aff_list(list);
+      }
+    else if (str == "you are the chosen one")
       my_putstr(str);
     if (list != NULL)
 	aff_list(list);
     }
-  else if (str == "you are the chosen one" && list != NULL)
+  else if (str == "you are the chosen one")
     {
       my_putstr(str);
       list->monster = getCreature();

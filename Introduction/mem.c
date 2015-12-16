@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:36:19 2015 KAYONGA Earvin
-** Last update Wed Dec 16 13:11:44 2015 KAYONGA Earvin
+** Last update Wed Dec 16 17:14:18 2015 KAYONGA Earvin
 */
 
 #include<stdlib.h>	
@@ -16,6 +16,7 @@ void	recap(t_player * current, t_hist *hist)
   if (current == NULL || hist == NULL)
     return;
   aff_team(current->team);
+  aff_hist(hist);
 }
 
 void	release(t_player * current, t_hist *hist,
@@ -27,8 +28,6 @@ void	release(t_player * current, t_hist *hist,
       arg != NULL)
     {
       recap(current, hist);
-      free(current);
-      free(hist);
       free(monster);
       free(arg);
     }

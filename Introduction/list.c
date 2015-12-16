@@ -5,11 +5,33 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 12:15:44 2015 KAYONGA Earvin
-** Last update Wed Dec 16 13:53:16 2015 KAYONGA Earvin
+** Last update Wed Dec 16 16:59:39 2015 KAYONGA Earvin
 */
 
 #include		<stdlib.h>
 #include		"utils.h"
+
+t_hist			*add_hist(t_hist *list, t_player *pl, t_creature *m, char* arg)
+{
+  t_hist                *node;
+  t_attack		*attack;
+
+  if ((node = malloc(sizeof(t_hist))) == NULL || m == NULL)
+    return (NULL);
+  else if (pl == NULL || list == NULL)
+    return (NULL);
+  node->next = list;
+  node->prev = NULL;
+  list->next = list;
+  list->prev = node;
+  node->player = pl;
+  if ((attack = malloc(sizeof(t_attack))) != NULL &&
+      (attack = malloc(sizeof(char*))) != NULL
+      && (attack->name = arg))
+    node->attack = attack;
+  node->opponent = m;
+  return (node);
+}
 
 t_list			*add_creature(t_list *list,
 				     t_creature *monster)
