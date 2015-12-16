@@ -5,7 +5,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Wed Dec 16 15:47:29 2015 DUBO Stévy
+** Last update Wed Dec 16 20:11:27 2015 DUBO Stévy
 */
 
 #include<stdlib.h>
@@ -20,39 +20,34 @@ void		aff_list(t_list* p)
   t_creature	*monster;
 
   monster = getCreature();
-  while (p->next != NULL)
-    {
-      my_putstr(monster->name);
-      my_putnbr(monster->lvl);
-      my_putnbr(monster->pv);
-      my_putnbr(monster->pvmax);
-      my_putnbr(monster->pm);
-      my_putnbr(monster->pmmax);
-      p->next;
-    }
+  my_putstr(monster->name);
+  my_putnbr(monster->lvl);
+  my_putnbr(monster->pv);
+  my_putnbr(monster->pvmax);
+  my_putnbr(monster->pm);
+  my_putnbr(monster->pmmax);
 }
 
 void		Outofbattle(t_list *list)
 {
-  char		**argv;
   t_creature	*monster;
   t_player	*player;
+  char		*str;
 
-  argv[1] = "Votre tour> ";
-  my_putstr(argv[1]);    
-  argv[2] = readline();
-  if (argv[2] == "team")
+  my_putstr("Votre tour> ");    
+  str = readline();
+  if (str == "team")
     {
-    my_putstr(argv[2]);
-    if (list->next != NULL)
+      my_putstr(str);
+    if (list != NULL)
 	aff_list(list);
     }
-  else if (argv[2] == "you are the chosen one" && list->next != NULL)
+  else if (str == "you are the chosen one" && list != NULL)
     {
-      my_putstr(argv[2]);
+      my_putstr(str);
       list->monster = getCreature();
     }
-  else if (argv[2] == "let's fight")
+  else if (str = "let's fight")
     {
       debut(player, monster);
     }
@@ -62,34 +57,33 @@ void		Outofbattle(t_list *list)
 
 void		attack(t_attack *attack, t_creature *monster)
 {
-  char		**argv;
+  char		*s;
   t_creature	*crea;
 
-  argv[2] = readline();
-  if (argv[2] == "slash")
+  s = readline();
+  if (s == "slash")
     {
-      my_putstr(argv[2]);
+      my_putstr(s);
       crea->pv = crea->pv - 15;
       monster->pm = monster->pm - 3;
     }
-  else if (argv[2] == "fire")
+  else if (s == "fire")
     {
+      my_putstr(s);
       crea->pv = crea->pv - 30;
       monster->pm = monster->pm - 7;
     }
-  else if (argv[2] == "gamble" && (monster || crea))
+  else if (s == "gamble")
     {
+      my_putstr(s);
       crea->pv = rand() % 21;
       monster->pv = rand() % 21;
     }
 }
-void		Inbattle(t_player *player, t_creature *monster)
+void		Inbattle(t_creature *monster)
 {
   t_creature	*crea;
 
   monster = getCreature();
   crea = getCreature();
-  
-  free(monster);
-  free(crea);
 }
