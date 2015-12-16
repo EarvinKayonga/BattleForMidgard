@@ -24,6 +24,8 @@ static t_creature g_creatures[] =
     {"Yoshi", 1, 10, 10, 20, 20},
     {"Maskas", 1, 10, 10, 20, 20},
     {"Kucco", 1, 10, 10, 20, 20},
+    {"Kgosse", 1, 10, 10, 20, 20},
+    {"Romaintrofor", 1, 10, 10, 20, 20},
     {NULL, 0, 0, 0, 0, 0}    
   };
 
