@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Thu Dec 17 13:05:02 2015 KAYONGA Earvin
-** Last update Thu Dec 17 13:16:22 2015 KAYONGA Earvin
+** Last update Thu Dec 17 13:30:20 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -15,6 +15,7 @@ void		chosen(t_player *player)
 {
   if (player == NULL)
     return;
+  
 }
 
 void		team(t_player *player)
@@ -29,4 +30,5 @@ void		let(t_player *player)
 {
   if (player == NULL)
     return;
+  
 }
