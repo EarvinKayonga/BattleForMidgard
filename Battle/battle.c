@@ -6,7 +6,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Thu Dec 17 14:22:21 2015 DUBO Stévy
+** Last update Thu Dec 17 14:28:34 2015 DUBO Stévy
 */
 
 #include	<stdlib.h>
@@ -42,13 +42,15 @@ t_attack	*gamble_attack()
   char		*s;
   int		rd;
   t_attack	*gamble;
+  float		proba;
 
   gamble = getAttack();
   srand(time(NULL));
   rd = rand() % 20;
+  proba = rand() % 0.5;
   monster = getCreature();
-  if (my_strcmp(s, "gamble") == 0)
-    while (monster->pv > 0 && monster->pm > 0)
+  if (my_strcmp(s, "gamble") == 0 && proba)
+    while (monster->pv > 0)
       {
 	monster->pv = monster->pv - rd;
       }
