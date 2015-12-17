@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:55:01 2015 KAYONGA Earvin
-** Last update Wed Dec 16 17:19:08 2015 KAYONGA Earvin
+** Last update Thu Dec 17 17:13:06 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -36,7 +36,7 @@ int		magic(t_player *current, t_hist **hist,
 	*hist = tmphist;
       if (results() > 2)
 	{
-	  if((current->team = malloc(sizeof(t_list))) != NULL
+	  if ((current->team = malloc(sizeof(t_list))) != NULL
 	     && (tmp = add_creature(current->team, monster)) != NULL)
 	      current-> team = tmp;
 	  capture(current->name, monster->name);

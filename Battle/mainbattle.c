@@ -5,15 +5,13 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 10:05:42 2015 DUBO Stévy
-** Last update Wed Dec 16 15:38:17 2015 DUBO Stévy
+** Last update Thu Dec 17 17:17:54 2015 KAYONGA Earvin
 */
 
 #include<unistd.h>
 #include<stdio.h>
 #include<stdlib.h>
 #include"../Introduction/utils.h"
-
-void	Outofbattle(t_player* p, t_creature *monster);
 
 int	mainbattle()
 {
