@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 18:19:54 2015 KAYONGA Earvin
-** Last update Thu Dec 17 12:48:36 2015 KAYONGA Earvin
+** Last update Thu Dec 17 13:15:04 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -60,8 +60,8 @@ void		options(t_player *player)
   char		*option;
   tb_func	tab[3];
 
-  tab[0] = &let;
-  tab[1] = &team;
+  tab[1] = &let;
+  tab[0] = &team;
   tab[2] = &chosen;
   if (player == NULL)
     return;
