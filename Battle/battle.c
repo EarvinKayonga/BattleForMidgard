@@ -5,28 +5,19 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Thu Dec 17 12:28:09 2015 DUBO Stévy
+** Last update Thu Dec 17 12:58:14 2015 KAYONGA Earvin
 */
 
-#include<stdlib.h>
-#include<stdio.h>
-#include<unistd.h>
-#include"../Introduction/utils.h"
-
-void		my_putstr(char* str);
-void		my_put_nbr(int n);
-t_creature      *getCreature();
-char		*readline();
-void		debut(t_player *current, t_creature *monster);
-void		aff_team(t_list *list);
-t_list		*add_crearure(t_list *list, t_creature *monster);
+#include	<stdlib.h>
+#include	<unistd.h>
+#include	"../Introduction/utils.h"
 
 void		Outofbattle(t_creature *monster)
 {
   char		*str;
   t_list	*team;
 
-  str = readline();
+  str = readLine();
   monster = getCreature();
   team = malloc(sizeof(t_list));
   my_putstr("Votre tour> \n");    
@@ -51,7 +42,7 @@ void		beginfight(t_list *team, t_creature *opponent)
   char		*str;
   t_player	*tmp;
 
-  str = readline();
+  str = readLine();
   tmp = malloc(sizeof(t_player));
   team = malloc(sizeof(t_list));
   name = malloc(sizeof(char));
@@ -77,7 +68,7 @@ void		attack(t_creature *monster)
   t_creature	*opponent;
 
   opponent = malloc(sizeof(t_creature));
-  s = readline();
+  s = readLine();
   proba = rand() % 2;
   if (my_strcmp(s, "slash\n") == 0)
     {
