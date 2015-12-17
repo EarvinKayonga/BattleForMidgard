@@ -6,7 +6,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Thu Dec 17 14:28:34 2015 DUBO Stévy
+** Last update Thu Dec 17 15:16:06 2015 DUBO Stévy
 */
 
 #include	<stdlib.h>
@@ -17,8 +17,8 @@ static	t_attack	g_attack[] =
   {
     {"slash", -3},
     {"fire", -7},
-    {"gamble"},
-    {"rest"}
+    {"gamble", -1},
+    {"rest", 10}
   };
 
 t_attack	*getAttack()
@@ -33,21 +33,21 @@ t_attack	*getAttack()
   if (!attack->name)
     return (NULL);
   attack->name = my_strdup(g_attack[a_random].name);
-  attack->pm = my_strdup(g_attack[a_random].pm));
+  my_put_nbr(g_attack[a_random].pm);
 return (attack);
 }
 
-t_attack	*gamble_attack()
+t_attack	*gamble_attack(t_creature *monster)
 {
   char		*s;
   int		rd;
   t_attack	*gamble;
-  float		proba;
+  int		proba;
 
-  gamble = getAttack();
-  srand(time(NULL));
+  s = readLine();
+  gamble = getAttack(g_attack[2]);
   rd = rand() % 20;
-  proba = rand() % 0.5;
+  proba = rand() % 2;
   monster = getCreature();
   if (my_strcmp(s, "gamble") == 0 && proba)
     while (monster->pv > 0)
@@ -55,4 +55,22 @@ t_attack	*gamble_attack()
 	monster->pv = monster->pv - rd;
       }
   return (gamble);
+}
+
+t_attack	*rest(t_creature *monster)
+{
+  char		*s;
+  t_attack	*rest;
+
+  s = readLine();
+  rest = getAttack(g_attack[3]);
+  if (my_strcmp(s, "rest") == 0)
+    {
+      my_putstr("Vous devez passez votre tour");
+      while (monster->pv > 0 && monster->pm == 0)
+	{
+	  monster->pm = monster->pm + 10;
+	}
+    }
+  return (rest);
 }
