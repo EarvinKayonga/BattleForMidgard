@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 18:19:54 2015 KAYONGA Earvin
-** Last update Thu Dec 17 13:15:04 2015 KAYONGA Earvin
+** Last update Thu Dec 17 16:21:28 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -22,7 +22,7 @@ char		*getAg()
   tab[0] = my_strdup("team");
   tab[2] = my_strdup("you are the chosen one");
   tab[3] = my_strdup("quit");
-  my_putstr("Votre Tour (Quit pour quitter) > ");
+  my_putstr("Votre Tour (quit pour quitter) > ");
   if ((a = readLine()) != NULL)
     {
       i = 0;
@@ -32,8 +32,11 @@ char		*getAg()
 	    return (a);
 	  i++;
 	}
-    }  
-  my_putstrN("Pas compris: help me !!! ou magic catch");
+    }
+  else if (a == NULL)
+    return (NULL);
+  my_putstr("Pas compris: let's fight ou team");
+  my_putstrN(" ou you are the chosen one ou quit");
   return (getAg());
 }
 

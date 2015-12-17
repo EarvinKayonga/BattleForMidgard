@@ -6,7 +6,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Thu Dec 17 15:26:32 2015 DUBO Stévy
+** Last update Thu Dec 17 16:23:34 2015 KAYONGA Earvin
 */
 
 #include		<stdlib.h>
@@ -33,8 +33,8 @@ t_attack		*getAttack()
   if (!attack->name)
     return (NULL);
   attack->name = my_strdup(g_attack[a_random].name);
-  my_put_nbr(g_attack[a_random].pm);
-return (attack);
+  attack->pm = my_strdup(g_attack[a_random].pm);
+  return (attack);
 }
 
 t_attack		*gamble_attack(t_creature *monster)
@@ -51,9 +51,7 @@ t_attack		*gamble_attack(t_creature *monster)
   monster = getCreature();
   if (my_strcmp(s, "gamble") == 0 && proba)
     while (monster->pv > 0)
-      {
-	monster->pv = monster->pv - rd;
-      }
+      monster->pv = monster->pv - rd;
   return (gamble);
 }
 

@@ -5,7 +5,7 @@
 ## Login   <dubo_s@etna-alternance.net>
 ## 
 ## Started on  Wed Dec 16 11:26:46 2015 DUBO Stévy
-## Last update Thu Dec 17 13:05:55 2015 KAYONGA Earvin
+## Last update Thu Dec 17 16:22:03 2015 KAYONGA Earvin
 ##
 CC 	=	gcc
 CFLAGS 	= 	-W -Wall -Werror -Wextra
@@ -21,7 +21,6 @@ SRC 	=	../utils/getCreature.c		\
 		../utils/my_strcpy.c		\
 		../utils/my_strncmp.c		\
 		../utils/my_str_to_wordtab.c	\
-		../utils/my_getnbr.c		\
 		../utils/my_putstr.c		\
 		../utils/my_strdup.c		\
 		../utils/my_strncpy.c		\
@@ -30,13 +29,15 @@ SRC 	=	../utils/getCreature.c		\
 		../utils/my_strcat.c		\
 		../utils/my_strlen.c		\
 		../utils/my_strndup.c		\
+		../utils/my_getnbr.c		\
 		../utils/readline.c		\
 		../Introduction/my_putstrN.c	\
 		../Introduction/list.c		\
 		../Introduction/element.c	\
 		func.c				\
 		player.c			\
-		battle.c			\
+		creature.c			\
+		chaines.c			\
 		init.c
 
 OBJ	=	$(SRC:%.c=%.o)

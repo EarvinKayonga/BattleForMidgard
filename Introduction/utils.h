@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 17:35:38 2015 KAYONGA Earvin
-** Last update Thu Dec 17 15:07:49 2015 DUBO Stévy
+** Last update Thu Dec 17 16:24:37 2015 KAYONGA Earvin
 */
 
 #ifndef		UTILS_H
@@ -64,6 +64,7 @@ typedef int		(*t_func)(t_player *current,
 typedef void		(*tb_func)(t_player *player);
 
 char			*readLine();
+int			my_getnbr(char *str);
 int			my_strlen(char *str);
 int			my_strcmp(char *s1, char *s2);
 char			*my_strcat(char *str1, char *str2);
@@ -92,6 +93,11 @@ t_player		*initPlayer(char *name);
 void			chosen(t_player *player);
 void			team(t_player *player);
 void			let(t_player *player);
+t_creature		*getChosenOne(t_player *player);
+int			giveAttack(t_creature *chosenOne,
+				   t_creature *opponent);
+int			my_list_size(t_list *begin);
+void			choose(t_list *team, int choice);
 void			inBattle(t_creature *c, t_creature opponent);
 
 #endif  /* !UTILS_H	*/
