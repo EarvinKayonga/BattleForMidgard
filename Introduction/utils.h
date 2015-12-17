@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 17:35:38 2015 KAYONGA Earvin
-** Last update Thu Dec 17 13:09:32 2015 KAYONGA Earvin
+** Last update Thu Dec 17 13:20:33 2015 KAYONGA Earvin
 */
 
 #ifndef		UTILS_H
@@ -39,6 +39,7 @@ typedef struct		s_creature
 typedef	struct		s_list
 {
   t_creature		*monster;
+  int			index;
   struct s_list		*next;
   struct s_list		*prev;
 }			t_list;
