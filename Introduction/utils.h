@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 17:35:38 2015 KAYONGA Earvin
-** Last update Thu Dec 17 13:20:33 2015 KAYONGA Earvin
+** Last update Thu Dec 17 13:37:43 2015 KAYONGA Earvin
 */
 
 #ifndef		UTILS_H
@@ -94,5 +94,6 @@ t_player		*initPlayer(char *name);
 void			chosen(t_player *player);
 void			team(t_player *player);
 void			let(t_player *player);
+void			inBattle(t_creature *c, t_creature opponent);
 
 #endif  /* !UTILS_H	*/
