@@ -5,7 +5,7 @@
 ## Login   <dubo_s@etna-alternance.net>
 ## 
 ## Started on  Wed Dec 16 11:26:46 2015 DUBO Stévy
-## Last update Wed Dec 16 11:28:45 2015 DUBO Stévy
+## Last update Thu Dec 17 11:08:46 2015 KAYONGA Earvin
 ##
 CC 	=	gcc
 CFLAGS 	= 	-W -Wall -Werror -Wextra
@@ -31,8 +31,11 @@ SRC 	=	../utils/getCreature.c		\
 		../utils/my_strlen.c		\
 		../utils/my_strndup.c		\
 		../utils/readline.c		\
-		mainbattle.c			\
-		battle.c
+		../Introduction/my_putstrN.c	\
+		../Introduction/list.c		\
+		../Introduction/element.c	\
+		player.c			\
+		init.c
 
 OBJ	=	$(SRC:%.c=%.o)
 

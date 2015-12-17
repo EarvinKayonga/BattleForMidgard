@@ -1,11 +1,11 @@
 /*
-** element.c for  in /home/earvin/Lab/BattleForMidgard/Introduction
+** element.c for  in /home/earvin/Lab/BattleForMidgard/Battle
 ** 
 ** Made by KAYONGA Earvin
 ** Login   <kayong_e@etna-alternance.net>
 ** 
-** Started on  Wed Dec 16 13:38:26 2015 KAYONGA Earvin
-** Last update Wed Dec 16 17:32:38 2015 KAYONGA Earvin
+** Started on  Thu Dec 17 11:18:28 2015 KAYONGA Earvin
+** Last update Thu Dec 17 11:19:30 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -38,13 +38,13 @@ void		aff_hist(t_hist *hist)
     return;
   tmp = hist;
   if (tmp->player != NULL &&
-      tmp->opponent != NULL &&
-      tmp->player->name != NULL &&
+            tmp->opponent != NULL &&
+            tmp->player->name != NULL &&
       tmp->attack->name != NULL)
     my_putstrN("\n Historique des attaques : \n");
   while (tmp != NULL && tmp->next != NULL
-	 && tmp->opponent != NULL &&
-	 tmp->player->name != NULL &&
+	  && tmp->opponent != NULL &&
+	  tmp->player->name != NULL &&
 	 tmp->attack->name != NULL)
     {
       my_putstr(tmp->player->name);
