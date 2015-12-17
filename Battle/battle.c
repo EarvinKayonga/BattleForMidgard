@@ -6,12 +6,12 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Thu Dec 17 15:16:06 2015 DUBO Stévy
+** Last update Thu Dec 17 15:26:32 2015 DUBO Stévy
 */
 
-#include	<stdlib.h>
-#include	<unistd.h>
-#include	"../Introduction/utils.h"
+#include		<stdlib.h>
+#include		<unistd.h>
+#include		"../Introduction/utils.h"
 
 static	t_attack	g_attack[] =
   {
@@ -21,10 +21,10 @@ static	t_attack	g_attack[] =
     {"rest", 10}
   };
 
-t_attack	*getAttack()
+t_attack		*getAttack()
 {
-  int		a_random;
-  t_attack	*attack;
+  int			a_random;
+  t_attack		*attack;
 
   a_random = rand() % 4;
   attack = malloc(sizeof(t_attack));
@@ -37,12 +37,12 @@ t_attack	*getAttack()
 return (attack);
 }
 
-t_attack	*gamble_attack(t_creature *monster)
+t_attack		*gamble_attack(t_creature *monster)
 {
-  char		*s;
-  int		rd;
-  t_attack	*gamble;
-  int		proba;
+  char			*s;
+  int			rd;
+  t_attack		*gamble;
+  int			proba;
 
   s = readLine();
   gamble = getAttack(g_attack[2]);
@@ -57,10 +57,10 @@ t_attack	*gamble_attack(t_creature *monster)
   return (gamble);
 }
 
-t_attack	*rest(t_creature *monster)
+t_attack		*rest(t_creature *monster)
 {
-  char		*s;
-  t_attack	*rest;
+  char			*s;
+  t_attack		*rest;
 
   s = readLine();
   rest = getAttack(g_attack[3]);
