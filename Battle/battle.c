@@ -6,7 +6,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Thu Dec 17 14:20:02 2015 DUBO Stévy
+** Last update Thu Dec 17 14:22:21 2015 DUBO Stévy
 */
 
 #include	<stdlib.h>
@@ -43,7 +43,7 @@ t_attack	*gamble_attack()
   int		rd;
   t_attack	*gamble;
 
-  gmable = getAttack();
+  gamble = getAttack();
   srand(time(NULL));
   rd = rand() % 20;
   monster = getCreature();
