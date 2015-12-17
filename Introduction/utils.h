@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 17:35:38 2015 KAYONGA Earvin
-** Last update Thu Dec 17 12:44:14 2015 KAYONGA Earvin
+** Last update Thu Dec 17 12:52:54 2015 KAYONGA Earvin
 */
 
 #ifndef		UTILS_H
@@ -61,6 +61,8 @@ typedef struct		s_hist
 typedef int		(*t_func)(t_player *current,
 				  t_hist **hist,
 				  t_creature *monster);
+
+typedef void		(*tb_func)(t_player *player);
 
 char			*readLine();
 int			my_strlen(char *str);
