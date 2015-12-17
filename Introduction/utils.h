@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 17:35:38 2015 KAYONGA Earvin
-** Last update Thu Dec 17 13:37:43 2015 KAYONGA Earvin
+** Last update Thu Dec 17 15:07:49 2015 DUBO Stévy
 */
 
 #ifndef		UTILS_H
@@ -20,8 +20,6 @@ typedef struct		s_attack
 {
   char			*name;
   int			pm;
-  struct s_attack	*next;
-  struct s_attack	*prev;
 }			t_attack;
 
 
