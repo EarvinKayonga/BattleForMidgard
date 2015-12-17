@@ -5,7 +5,7 @@
 ** Login   <dubo_s@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 13:51:52 2015 DUBO Stévy
-** Last update Wed Dec 16 22:56:03 2015 DUBO Stévy
+** Last update Thu Dec 17 09:57:17 2015 DUBO Stévy
 */
 
 #include<stdlib.h>
@@ -39,17 +39,17 @@ void		Outofbattle(t_creature *monster)
   my_putstr("Votre tour> ");    
   str = readline();
   if (list != NULL)
-    if (str == "team")
+    if (my_strcmp(str, "team") == 0)
       {
 	my_putstr(str);
-	aff_list(list);
+	aff_list(monster);
       }
-  else if (str == "you are the chosen one")
+    else if (my_strcmp(str, "you are the chosen one"))
     {
       my_putstr(str);
       list->monster = getCreature();
     }
-  else if (str == "let's fight")
+    else if (my_strcmp(str, "let's fight"))
     {
       my_putstr(str);
       debut(player, monster);
@@ -64,19 +64,19 @@ void		attack(t_creature *monster)
   t_creature	*opponent;
 
   s = readline();
-  if (s == "slash")
+  if (my_strcmp(s, "slash"))
     {
       my_putstr(s);
       opponent->pv = opponent->pv - 15;
       monster->pm = monster->pm - 3;
     }
-  else if (s == "fire")
+  else if (my_strcmp(s, "fire"))
     {
       my_putstr(s);
-      crea->pv = crea->pv - 30;
+      opponent->pv = opponent->pv - 30;
       monster->pm = monster->pm - 7;
     }
-  else if (s == "gamble" && (monster || opponent))
+  else if (my_strcmp(s, "gamble"))
     {
       my_putstr(s);
       opponent->pv = rand() % 21;
