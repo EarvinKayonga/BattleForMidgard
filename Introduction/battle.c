@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Tue Dec 15 11:55:01 2015 KAYONGA Earvin
-** Last update Thu Dec 17 17:13:06 2015 KAYONGA Earvin
+** Last update Fri Dec 18 11:03:19 2015 KAYONGA Earvin
 */
 
 #include	<stdlib.h>
@@ -42,7 +42,7 @@ int		magic(t_player *current, t_hist **hist,
 	  capture(current->name, monster->name);
 	  return (1);
 	}
-      my_putstrN("\n Ca n'a pas marché \n ");
+      my_putstrN("\n Ca n'a pas marché \n  ");
       my_putstr(monster->name);
       my_putstrN(" s'énerve et vous charge violemment, vous poussant à fuir.");
     }
