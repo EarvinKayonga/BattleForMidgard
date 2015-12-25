@@ -5,10 +5,10 @@
 ## Login   <dubo_s@etna-alternance.net>
 ## 
 ## Started on  Wed Dec 16 11:26:46 2015 DUBO Stévy
-## Last update Thu Dec 17 16:22:03 2015 KAYONGA Earvin
+## Last update Fri Dec 25 11:37:10 2015 KAYONGA Earvin
 ##
 CC 	=	gcc
-CFLAGS 	= 	-W -Wall -Werror -Wextra
+CFLAGS 	= 	-W -Wall -Werror -Wextra -pedantic
 NAME 	=	sta
 RM 	=	rm -f
 SRC 	=	../utils/getCreature.c		\

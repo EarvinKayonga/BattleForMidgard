@@ -5,7 +5,7 @@
 ** Login   <kayong_e@etna-alternance.net>
 ** 
 ** Started on  Wed Dec 16 12:15:44 2015 KAYONGA Earvin
-** Last update Thu Dec 17 11:30:24 2015 KAYONGA Earvin
+** Last update Fri Dec 25 11:35:08 2015 KAYONGA Earvin
 */
 
 #include		<stdlib.h>
@@ -62,6 +62,8 @@ void			aff_team(t_list *list)
 	 && tmp->monster != NULL)
     {
       my_putstrN(" ---");
+      if (tmp->index)
+	my_put_nbr(tmp->index);
       aff_creature(tmp->monster);
       tmp = tmp->next;
       my_putstrN(" ---");
