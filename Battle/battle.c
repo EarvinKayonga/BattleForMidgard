@@ -13,7 +13,7 @@
 #include		<unistd.h>
 #include		"../Introduction/utils.h"
 
-static	t_attack	g_attack[] =
+static	t_attack	g_attack[4] =
   {
     {"slash", -3},
     {"fire", -7},
